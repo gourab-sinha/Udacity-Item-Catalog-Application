@@ -1,0 +1,33 @@
+
+
+
+	<div class="row">
+		<table class="table-container">
+			<tr>
+				<td>
+					<div class="col-md-6 col-md-offset-1 padding-top">
+						<form action="{{ url_for('editRestaurant',restaurant_id = restaurant.id)}}" method = "post">
+							<div class="form-group">
+								<label style="color:white;" for="name">Name:</label>
+								<input type ="text" class="form-control" name="name" value="{{restaurant.name }}">
+				</td>
+			</tr>
+			<tr>
+				<td>
+								<div class="padding-bottom"></div>
+								<button type="submit" class="btn btn-default" id="submit" type="submit">
+								<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Save</button>				
+							</div>			
+						</form>
+					</div>
+				</td>
+				<td>
+					<a href = "{{url_for('showMenu', restaurant_id = restaurant.id)}}">
+					<button class="btn btn-default delete">
+					<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					Cancel</button>
+					</a>
+				</td>
+			</tr>
+		</table>
+	</div>

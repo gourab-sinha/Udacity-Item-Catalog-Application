@@ -3,18 +3,24 @@
 {% include "header.html" %}
 <h2 style="color:white;"> Are you sure you want to delete {{item.name}}? </h2>
 
-<form action="#" method = 'post'>
-
-	<button type="submit" class="btn btn-default delete" id="submit" type="submit">
-	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete</button>
-	<button class="btn btn-default delete">
-	<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-	<a href = "{{url_for('showMenu', restaurant_id = item.restaurant_id)}}">
-	Cancel
-	</a>
-	</button>
-	
-
-</form>
-
+<div>
+	<table class="table-container">
+		<tr>
+			<td>
+				<form action="#" method = 'post'>
+					<button type="submit" class="btn btn-default delete" id="submit" type="submit">
+					<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete</button>
+				</form>
+			</td>
+			<td>
+				<a href = "{{url_for('showMenu', restaurant_id = item.restaurant_id)}}">
+					<button style="color: black;" class="btn btn-default delete">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>	
+						Cancel
+					</button>
+				</a>
+			</td>
+		</tr>
+</table>
+</div>
 {% endblock %}

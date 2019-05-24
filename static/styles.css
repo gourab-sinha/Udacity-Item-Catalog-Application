@@ -130,6 +130,15 @@ h3 {
 	margin: 45px 0;
 }
 
+.button-container{
+ 	display: inline-flex;
+}
+
+.table-container{
+	border-collapse:separate;
+	border-spacing: 0 15px;
+}	
+
 .grid-container{
   display: grid;
   grid-template-columns: auto auto auto;
