@@ -47,6 +47,8 @@ C. Run
 8. 'https://localhost:5000/restaurant/<int:restaurant_id>/menu/<int:menu_id>/delete' to delete item from menu of a restaurant.(Required login and permission)
 9. 'https://localhost:5000/login/' to login into account.
 # JSON Endpoints
+This application also has json endpoints which can be used access the information from database for development and testing purpose. All endpoints are listed below:
+
 1. 'https://localhost:5000/restaurant/JSON'
 
 '''
@@ -104,6 +106,13 @@ paste code below to get the python3 compatiable modules and packages.
 C. If python3 project.py gives error that might be for dos and unix format difference. To over come install
 1. run sudo apt-get install dos2unix on gitbash terminal/cmd
 2. run dos2unix application.py on gitbash terminal/cmd
-D. Unreachable issue may be cause due to ignoring 'https://'
 
+D. Unreachable issue may be caused due to ignoring 'https://'. 'https://' must be included as Flask app run with ssl_context.
+
+# Note
+Facebook recently restrict usage of its applications and apis through http connection. Now Facebook only allows 'https' connections. To usage or navigate all the paths 'https://' should be included at begining of the url. To create custom certificate and key run
+
+1. sudo pip install pyopenssl
+2. sudo pip install Werkzeug --upgrade
+3. openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365
 
