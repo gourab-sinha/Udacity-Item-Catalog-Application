@@ -93,7 +93,7 @@ This application also has json endpoints which can be used access the informatio
 }
 '''
 
-# Troubleshout
+# Troubleshoot
 A. If shared folder is not visiable, run vagrant reload on gitbash terminal/cmd
 
 B. If packages or modules are not available then open vagrantfile and change/ 
