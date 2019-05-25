@@ -116,3 +116,4 @@ Facebook recently restrict usage of its applications and apis through http conne
 2. sudo pip install Werkzeug --upgrade
 3. openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365
 
+**Internet connectivity is required to login with facebook or google **
